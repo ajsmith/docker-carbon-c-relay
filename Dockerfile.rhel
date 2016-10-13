@@ -11,4 +11,5 @@ RUN yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms https://dl.fe
 
 WORKDIR /var/lib/carbon-c-relay
 USER carbon-c-relay
+EXPOSE 2003
 CMD ["/usr/bin/carbon-c-relay", "-f", "/etc/carbon-c-relay.conf"]
